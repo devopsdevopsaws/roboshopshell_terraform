@@ -2,7 +2,7 @@
 uid=$(id -u)
 date=$(date +%F)
 script_name=$0
-script_path=/home/centos/roboshopshell/logs
+script_path=/home/centos/roboshopshell_terraform/logs
 LOGFILE=$script_path/$script_name-$date.log
 R="\e[31m"
 G="\e[32m"
@@ -54,7 +54,7 @@ pip3.6 install -r requirements.txt &>>$LOGFILE
 
 VALIDATE $? "install dependencies "
 
-cp -rp /home/centos/roboshopshell/payment.service /etc/systemd/system/payment.service &>>$LOGFILE
+cp -rp /home/centos/roboshopshell_terraform/payment.service /etc/systemd/system/payment.service &>>$LOGFILE
 
 VALIDATE $? "copy payment service "
 
