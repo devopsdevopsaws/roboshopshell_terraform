@@ -2,7 +2,7 @@
 uid=$(id -u)
 date=$(date +%F)
 script_name=$0
-script_path=/home/centos/roboshopshell/logs
+script_path=/home/centos/roboshopshell_terraform/logs
 LOGFILE=$script_path/$script_name-$date.log
 R="\e[31m"
 G="\e[32m"
@@ -54,7 +54,7 @@ mv target/shipping-1.0.jar shipping.jar &>>$LOGFILE
 
 VALIDATE $? "rename file"
 
-cp -rp /home/centos/roboshopshell/shipping.service /etc/systemd/system/shipping.service &>>$LOGFILE
+cp -rp /home/centos/roboshopshell_terraform/shipping.service /etc/systemd/system/shipping.service &>>$LOGFILE
 
 VALIDATE $? "copy shipping service"
 
