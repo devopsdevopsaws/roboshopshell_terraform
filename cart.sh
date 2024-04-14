@@ -2,7 +2,7 @@
 uid=$(id -u)
 date=$(date +%F)
 script_name=$0
-script_path=/home/centos/roboshopshell/logs
+script_path=/home/centos/roboshopshell_terraform/logs
 LOGFILE=$script_path/$script_name-$date.log
 R="\e[31m"
 G="\e[32m"
@@ -54,7 +54,7 @@ npm install &>>$LOGFILE
 
 VALIDATE $? "Install dependenices"
 
-cp -rp /home/centos/roboshopshell/cart.service /etc/systemd/system/cart.service &>>$LOGFILE
+cp -rp /home/centos/roboshopshell_terraform/cart.service /etc/systemd/system/cart.service &>>$LOGFILE
 
 VALIDATE $? "Create and user cart service"
 
