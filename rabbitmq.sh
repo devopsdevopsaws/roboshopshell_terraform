@@ -2,7 +2,7 @@
 uid=$(id -u)
 date=$(date +%F)
 script_name=$0
-script_path=/home/centos/roboshopshell/logs
+script_path=/home/centos/roboshopshell_terraform/logs
 LOGFILE=$script_path/$script_name-$date.log
 R="\e[31m"
 G="\e[32m"
