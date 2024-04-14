@@ -2,7 +2,7 @@
 uid=$(id -u)
 date=$(date +%F)
 script_name=$0
-script_path=/home/centos/roboshopshell/logs
+script_path=/home/centos/roboshopshell_terraform/logs
 LOGFILE=$script_path/$script_name-$date.log
 R="\e[31m"
 G="\e[32m"
@@ -54,7 +54,7 @@ unzip /tmp/web.zip &>>$LOGFILE
 
 VALIDATE $? "unzip nginx"
 
-cp -rp /home/centos/roboshopshell/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$LOGFILE
+cp -rp /home/centos/roboshopshell_terraform/roboshop.conf /etc/nginx/default.d/roboshop.conf &>>$LOGFILE
 
 VALIDATE $? "copy roboshop.conf"
 
