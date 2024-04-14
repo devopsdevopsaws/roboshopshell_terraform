@@ -46,6 +46,8 @@ unzip /tmp/payment.zip &>>$LOGFILE
 
 VALIDATE $? "unzip payment"
 
+sed -i 's/uwsgi/uwsgi==2.0.23/g' /app/requirements.txt  &>>$LOGFILE
+
 pip3.6 install -r requirements.txt &>>$LOGFILE
 
 VALIDATE $? "install dependencies "
