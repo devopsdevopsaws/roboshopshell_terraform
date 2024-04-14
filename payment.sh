@@ -32,11 +32,7 @@ VALIDATE $? "Install python"
 
 useradd roboshop &>>$LOGFILE
 
-VALIDATE $? "create user"
-
 mkdir /app &>>$LOGFILE
-
-VALIDATE $? "create app directory"
 
 curl -L -o /tmp/payment.zip https://roboshop-builds.s3.amazonaws.com/payment.zip &>>$LOGFILE
 
